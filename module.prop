@@ -1,6 +1,6 @@
 id=boot_cmd
 name=LineageOS TV / BlissOS 17 HDMI Sound Fixer
-version=v1.0
-versionCode=1
+version=v1.1
+versionCode=1.1
 author=BugDroid
-description=LineageOS TV / BlissOS 17 HDMI Sound Fixer. Set "androidboot.audio_hdmi=1" and "syscall_hardening=off" in grub cmdline to make it work
+description=LineageOS TV / BlissOS 17 HDMI Sound Fixer. Set "androidboot.hdmi_audio=1" and "syscall_hardening=off" in grub cmdline to make it work
