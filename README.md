@@ -22,13 +22,13 @@ It was created for **LineageOS TV (Android 14 x86)** and should also be compatib
 3. Locate your LineageOS boot entry and append the following kernel parameters to the `linux` line:
 
    ```text
-   androidboot.audio_hdmi=1 syscall_hardening=off
+   androidboot.hdmi_audio=1 syscall_hardening=off
    ```
 
    Example:
 
    ```text
-   linux /kernel root=/dev/ram0 quiet SRC=/LineageOS DATA= androidboot.audio_hdmi=1 syscall_hardening=off
+   linux /kernel root=/dev/ram0 quiet SRC=/LineageOS DATA= androidboot.hdmi_audio=1 syscall_hardening=off
    ```
 
 4. Save the file and reboot.
@@ -38,13 +38,13 @@ It was created for **LineageOS TV (Android 14 x86)** and should also be compatib
 Android automatically exposes the GRUB boot parameter:
 
 ```text
-androidboot.audio_hdmi=1
+androidboot.hdmi_audio=1
 ```
 
 as the read-only system property:
 
 ```text
-ro.boot.audio_hdmi=1
+ro.boot.hdmi_audio=1
 ```
 
 During boot, the module reads this property and sets:
