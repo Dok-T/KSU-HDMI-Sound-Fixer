@@ -19,7 +19,7 @@ It was created for **LineageOS TV (Android 14 x86)** and should also be compatib
    /boot/grub/grub.cfg
    ```
 
-3. Locate your LineageOS boot entry and append the following kernel parameters to the `linux` line:
+3. Locate your LineageOS / BlissOS boot entry and append the following kernel parameters to the `linux` line:
 
    ```text
    androidboot.hdmi_audio=1 syscall_hardening=off
@@ -28,8 +28,14 @@ It was created for **LineageOS TV (Android 14 x86)** and should also be compatib
    Example:
 
    ```text
-   linux /kernel root=/dev/ram0 quiet SRC=/LineageOS DATA= androidboot.hdmi_audio=1 syscall_hardening=off
+   linux /kernel .......... (put these at the end) androidboot.hdmi_audio=1 syscall_hardening=off
    ```
+
+   Root is mandatory and need to be enabled with: 
+   ```text
+   syscall_hardening=off
+   ```
+   
 
 4. Save the file and reboot.
 
